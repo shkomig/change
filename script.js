@@ -92,10 +92,9 @@ if (contactForm) {
     try {
       // Send email using EmailJS
       await emailjs.send(
-        'service_338w0sw', // Replace with your EmailJS service ID
-        'vny1spf', // Replace with your EmailJS template ID
-        templateParams,
-        'rbiLS5aNEZQqMoxM0' // Replace with your EmailJS public key
+        'service_338w0sw', // EmailJS service ID
+        'vny1spf', // EmailJS template ID
+        templateParams
       )
 
       // Show success message
