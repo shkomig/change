@@ -81,6 +81,9 @@ html {
   height: 50px;
   object-fit: contain;
   transition: transform 0.3s ease;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  padding: 5px;
 }
 
 .logo-img:hover {
@@ -191,6 +194,9 @@ html {
   margin-bottom: 20px;
   filter: drop-shadow(0 10px 30px rgba(29, 53, 87, 0.3));
   animation: logoFloat 3s ease-in-out infinite;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  padding: 10px;
 }
 
 .hero-title {
@@ -747,6 +753,9 @@ html {
   height: 60px;
   filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
 }
 
 .footer .logo-img:hover {
