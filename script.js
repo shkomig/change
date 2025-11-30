@@ -406,7 +406,6 @@ async function fetchGitHubData() {
     'social-money-israel',
     'Trading_System',
     'Learning_System',
-    'haiim-lavi',
     'Lemdata',
     'pro-gemini-trading',
     'ZERO'
