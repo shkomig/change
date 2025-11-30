@@ -403,6 +403,16 @@ window.addEventListener('scroll', debouncedScrollHandler)
 
 async function fetchGitHubData() {
   const username = 'shkomig';
+  const selectedRepos = [
+    'social-money-israel',
+    'Trading_System',
+    'Learning_System',
+    'haiim-lavi',
+    'Lemdata',
+    'pro-gemini-trading',
+    'ZERO'
+  ];
+
   try {
     // Fetch user profile
     const userResponse = await fetch(`https://api.github.com/users/${username}`);
@@ -412,9 +422,21 @@ async function fetchGitHubData() {
     if (avatarImg) {
       avatarImg.src = userData.avatar_url;
     }
-    // Fetch repos
-    const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
-    const reposData = await reposResponse.json();
+
+    // Fetch selected repos
+    const reposData = [];
+    for (const repoName of selectedRepos) {
+      try {
+        const repoResponse = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
+        const repoData = await repoResponse.json();
+        if (repoData.name) {
+          reposData.push(repoData);
+        }
+      } catch (error) {
+        console.warn(`Error fetching repo ${repoName}:`, error);
+      }
+    }
+
     // Populate projects
     const projectsGrid = document.getElementById('projects-grid');
     if (projectsGrid) {
