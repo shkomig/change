@@ -211,8 +211,8 @@ html {
 }
 
 .hero-tagline {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 20px;
   opacity: 0.9;
   color: var(--color-accent);
