@@ -32,7 +32,7 @@
     <meta name="ICBM" content="31.9292, 34.7986" />
     <meta name="revisit-after" content="7 days" />
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics (async) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -44,6 +44,7 @@
     <!-- Preload critical resources for better LCP -->
     <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="my photo.jpeg" as="image" type="image/jpeg">
     <noscript><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap"></noscript>
 
     <!-- Open Graph / Facebook -->
@@ -226,7 +227,7 @@
           <div class="logo">
             <picture>
               <source srcset="logo.webp" type="image/webp">
-              <img src="logo.PNG" alt="Change - פיתוח אתרים ומערכות AI בנס ציונה" title="Change Digital Solutions Logo" class="logo-img" />
+              <img src="logo.PNG" alt="Change - פיתוח אתרים ומערכות AI בנס ציונה" title="Change Digital Solutions Logo" class="logo-img" loading="lazy" />
             </picture>
           </div>
           <ul class="nav-menu">
@@ -253,7 +254,7 @@
           <div class="hero-logo">
             <picture>
               <source srcset="logo.webp" type="image/webp">
-              <img src="logo.PNG" alt="Change - פיתוח אתרים ומערכות AI בנס ציונה" title="Change Digital Solutions - חי עטיה" class="hero-logo-img" />
+              <img src="logo.PNG" alt="Change - פיתוח אתרים ומערכות AI בנס ציונה" title="Change Digital Solutions - חי עטיה" class="hero-logo-img" loading="lazy" />
             </picture>
             <h1 class="hero-title">Change</h1>
             <p class="hero-tagline">אתרים ומערכות AI למורים, עסקים ומוסדות חינוך</p>
@@ -318,7 +319,7 @@
       <div class="container">
         <div class="about-content">
           <div class="about-avatar">
-            <img id="github-avatar" class="avatar" src="my photo.jpeg" alt="חי עטיה - מייסד Change Digital Solutions" title="חי עטיה - מפתח בכיר ומייסד" loading="lazy" />
+            <img id="github-avatar" class="avatar" src="my photo.jpeg" alt="חי עטיה - מייסד Change Digital Solutions" title="חי עטיה - מפתח בכיר ומייסד" loading="lazy" width="400" height="400" />
           </div>
           <div class="about-text">
             <h2 class="section-title">אודות Change | חי עטיה</h2>
