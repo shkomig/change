@@ -32,18 +32,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Initialize EmailJS
 emailjs.init('rbiLS5aNEZQqMoxM0') // Replace with your EmailJS public key
 
-// Header background change on scroll
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.header')
-  if (window.scrollY > 100) {
-    header.style.background = 'rgba(255, 255, 255, 0.98)'
-    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)'
-  } else {
-    header.style.background = 'rgba(255, 255, 255, 0.95)'
-    header.style.boxShadow = 'none'
-  }
-})
-
 // Intersection Observer for animations
 const observerOptions = {
   threshold: 0.1,
@@ -60,7 +48,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document
-  .querySelectorAll('.service-card, .portfolio-item, .stat, .tech-item')
+  .querySelectorAll('.service-card')
   .forEach((el) => {
     observer.observe(el)
   })
@@ -156,109 +144,6 @@ function showNotification(message, type = 'info') {
   }, 5000)
 }
 
-// Counter animation for stats
-function animateCounters() {
-  const counters = document.querySelectorAll('.stat-number')
-
-  counters.forEach((counter) => {
-    const target = counter.textContent
-    const isPercentage = target.includes('%')
-    const isPlus = target.includes('+')
-    const isSlash = target.includes('/')
-
-    let finalNumber
-    if (isPercentage) {
-      finalNumber = parseInt(target.replace('%', ''))
-    } else if (isPlus) {
-      finalNumber = parseInt(target.replace('+', ''))
-    } else if (isSlash) {
-      finalNumber = target // Keep as is for 24/7
-    } else {
-      finalNumber = parseInt(target)
-    }
-
-    if (isSlash) {
-      counter.textContent = finalNumber
-      return
-    }
-
-    let current = 0
-    const increment = finalNumber / 50
-    const timer = setInterval(() => {
-      current += increment
-      if (current >= finalNumber) {
-        current = finalNumber
-        clearInterval(timer)
-      }
-
-      let displayValue = Math.floor(current)
-      if (isPercentage) {
-        displayValue += '%'
-      } else if (isPlus) {
-        displayValue += '+'
-      }
-
-      counter.textContent = displayValue
-    }, 30)
-  })
-}
-
-// Trigger counter animation when stats section is visible
-const statsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateCounters()
-        statsObserver.unobserve(entry.target)
-      }
-    })
-  },
-  { threshold: 0.5 }
-)
-
-const statsSection = document.querySelector('.stats')
-if (statsSection) {
-  statsObserver.observe(statsSection)
-}
-
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset
-  const parallaxElements = document.querySelectorAll(
-    '.floating-elements .element'
-  )
-
-  parallaxElements.forEach((element, index) => {
-    const speed = 0.5 + index * 0.1
-    element.style.transform = `translateY(${scrolled * speed}px)`
-  })
-})
-
-// Add active class to navigation links based on scroll position
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section[id]')
-  const navLinks = document.querySelectorAll('.nav-link')
-
-  let current = ''
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 100
-    const sectionHeight = section.offsetHeight
-    if (
-      window.pageYOffset >= sectionTop &&
-      window.pageYOffset < sectionTop + sectionHeight
-    ) {
-      current = section.getAttribute('id')
-    }
-  })
-
-  navLinks.forEach((link) => {
-    link.classList.remove('active')
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active')
-    }
-  })
-})
-
 // Add CSS for active navigation link
 const style = document.createElement('style')
 style.textContent = `
@@ -304,13 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroContent) {
     heroContent.classList.add('fade-in-up')
   }
-
-  // Preload images
-  const images = ['logo.png']
-  images.forEach((src) => {
-    const img = new Image()
-    img.src = src
-  })
 })
 
 // Add keyboard navigation support

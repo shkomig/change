@@ -41,6 +41,11 @@
       gtag('config', 'GA_MEASUREMENT_ID');
     </script>
 
+    <!-- Preload critical resources for better LCP -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap"></noscript>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="he_IL" />
@@ -77,15 +82,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css" />
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -206,7 +202,7 @@
       "foundingDate": "2024",
       "founder": {
         "@type": "Person",
-        "name": "חיים עטיה",
+        "name": "חי עטיה",
         "jobTitle": "מייסד ומפתח בכיר"
       },
       "contactPoint": {
@@ -316,7 +312,7 @@
       <div class="container">
         <div class="about-content">
           <div class="about-avatar">
-            <img id="github-avatar" class="avatar" src="" alt="חיים עטיה - מייסד Change Digital Solutions" title="חיים עטיה - מפתח בכיר ומייסד" />
+            <img id="github-avatar" class="avatar" src="" alt="חיים עטיה - מייסד Change Digital Solutions" title="חיים עטיה - מפתח בכיר ומייסד" loading="lazy" />
           </div>
           <div class="about-text">
             <h2 class="section-title">אודות Change | חיים עטיה</h2>
@@ -556,7 +552,7 @@
         <div class="footer-content">
           <div class="footer-section">
             <div class="logo">
-              <img src="logo.PNG" alt="Change - פיתוח אתרים ומערכות AI בנס ציונה" title="Change Digital Solutions" class="logo-img" />
+              <img src="logo.PNG" alt="Change - פיתוח אתרים ומערכות AI בנס ציונה" title="Change Digital Solutions" class="logo-img" loading="lazy" />
               <span class="logo-text">change</span>
             </div>
             <p>פתרונות דיגיטליים מתקדמים לעסקים</p>
