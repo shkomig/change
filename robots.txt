@@ -2,12 +2,38 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://change.co.il/sitemap.xml
+Sitemap: https://change-digital-solutions.netlify.app/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-# Disallow admin areas (if any)
+# Disallow admin areas and private content
 Disallow: /admin/
 Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Allow important directories
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
 
