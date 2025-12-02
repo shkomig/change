@@ -290,13 +290,10 @@ async function fetchGitHubData() {
   ];
 
   try {
-    // Fetch user profile
-    const userResponse = await fetch(`https://api.github.com/users/${username}`);
-    const userData = await userResponse.json();
-    // Set avatar
+    // Set avatar to local image instead of GitHub
     const avatarImg = document.getElementById('github-avatar');
     if (avatarImg) {
-      avatarImg.src = userData.avatar_url;
+      avatarImg.src = 'my photo.jpeg';
     }
 
     // Fetch selected repos

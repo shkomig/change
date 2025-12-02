@@ -6,7 +6,7 @@
 
 **Version:** 1.1.0
 **Last Updated:** December 2, 2025
-**Author:** Change Digital Solutions
+**Author:** Hai Atia - Change Digital Solutions
 **Repository:** https://github.com/shkomig/change
 
 ## 🏗️ System Architecture
@@ -194,7 +194,7 @@ The website showcases 7 specific projects:
 1. **social-money-israel** - Social finance platform
 2. **Trading_System** - Automated trading system
 3. **Learning_System** - Educational platform
-4. **haiim-lavi** - Personal portfolio project
+4. **Hai Atia** - Personal portfolio project
 5. **Lemdata** - Data management system
 6. **pro-gemini-trading** - Advanced trading platform
 7. **ZERO** - Zero-knowledge system
