@@ -16,6 +16,12 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
 
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="google504a560032eb89bd" />
 
@@ -25,6 +31,15 @@
     <meta name="geo.placename" content="Ness Ziona" />
     <meta name="ICBM" content="31.9292, 34.7986" />
     <meta name="revisit-after" content="7 days" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -175,6 +190,35 @@
         "חינוך דיגיטלי"
       ],
       "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Additional Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://change-digital-solutions.netlify.app/#organization",
+      "name": "Change - Digital Solutions",
+      "url": "https://change-digital-solutions.netlify.app",
+      "logo": "https://change-digital-solutions.netlify.app/images/change-logo.png",
+      "description": "Change - פיתוח אתרים מקצועיים ומערכות למידה AI למורים, עסקים ומוסדות חינוך בנס ציונה",
+      "foundingDate": "2024",
+      "founder": {
+        "@type": "Person",
+        "name": "חיים עטיה",
+        "jobTitle": "מייסד ומפתח בכיר"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+972-50-123-4567",
+        "contactType": "customer service",
+        "availableLanguage": ["Hebrew", "English"]
+      },
+      "sameAs": [
+        "https://github.com/shkomig",
+        "https://www.linkedin.com/in/haim-atia-change"
+      ]
     }
     </script>
   </head>
