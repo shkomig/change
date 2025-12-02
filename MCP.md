@@ -250,16 +250,16 @@ git clone https://github.com/shkomig/change.git
 
 ### Bundle Size (After Optimization)
 - **HTML:** ~30KB (semantic structure with structured data)
-- **CSS:** ~20KB (optimized styles with variables)
+- **CSS:** ~19KB (optimized styles with variables)
 - **JavaScript:** ~12KB (vanilla implementation, removed ~135 lines unused code)
-- **Images:** ~40KB (WebP format, 96% reduction from PNG)
+- **Images:** ~24KB (WebP format, 95% reduction from originals)
 
 ### Performance Optimizations Implemented
-- **JavaScript:** Removed unused code (stats animations, duplicate event listeners)
-- **Images:** WebP format with PNG fallback (96% size reduction)
-- **Loading:** Preload critical resources, lazy loading for below-fold images
-- **Compression:** Server-side gzip/deflate/brotli via _headers
-- **Caching:** Optimized resource loading order
+- **JavaScript:** Removed unused code (135+ lines), delayed GitHub API fetch (2s)
+- **Images:** WebP format with PNG fallback, lazy loading for all images
+- **Loading:** Preload critical resources, non-blocking external requests
+- **CLS Prevention:** Added dimensions to all images (400x400 for avatar)
+- **Bundle Reduction:** 86% logo size reduction, 83% avatar size reduction
 
 ## 🐛 Known Issues & Limitations
 
