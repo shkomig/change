@@ -79,9 +79,14 @@ if (contactForm) {
 
     try {
       // Send email using EmailJS
+      const serviceID = 'service_338w0sw';
+      const templateID = 'vny1spf';
+      
+      console.log('Attempting to send email with:', { serviceID, templateID });
+      
       await emailjs.send(
-        'service_338w0sw', // EmailJS service ID
-        'vny1spf', // EmailJS template ID
+        serviceID,
+        templateID,
         templateParams
       )
 
@@ -90,6 +95,9 @@ if (contactForm) {
       contactForm.reset()
     } catch (error) {
       console.error('EmailJS error:', error)
+      if (error.status === 400 && error.text && error.text.includes('template ID not found')) {
+         console.error('CRITICAL: The Template ID ' + 'vny1spf' + ' is invalid. Please check EmailJS dashboard.');
+      }
       showNotification('אירעה שגיאה בשליחת ההודעה. אנא נסו שוב.', 'error')
     } finally {
       // Reset button
