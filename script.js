@@ -80,7 +80,7 @@ if (contactForm) {
     try {
       // Send email using EmailJS
       const serviceID = 'service_338w0sw';
-      const templateID = 'vny1spf';
+      const templateID = 'template_nz9c4nb';
       
       console.log('Attempting to send email with:', { serviceID, templateID });
       
