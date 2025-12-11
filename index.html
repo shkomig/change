@@ -1,223 +1,167 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Change - פיתוח אתרים ומערכות AI בנס ציונה | חי עטיה</title>
-    <meta
-      name="description"
-      content="Change - פיתוח אתרים מקצועיים ומערכות למידה AI למורים, עסקים ומוסדות חינוך בנס ציונה. אוטומציה עסקית חכמה, פתרונות דיגיטליים מתקדמים. צור קשר: 050-123-4567"
-    />
-    <meta
-      name="keywords"
-      content="פיתוח אתרים נס ציונה, מערכות AI למורים, אוטומציה עסקית, פיתוח אתרים עסקיים, מערכות למידה חכמות, פתרונות דיגיטליים נס ציונה, חי עטיה, פיתוח אפליקציות, קידום אתרים SEO, בינה מלאכותית לחינוך"
-    />
-    <meta name="author" content="חי עטיה - Change Digital Solutions" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="googlebot" content="index, follow" />
-
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://api.emailjs.com https://api.github.com;" />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="0AeOqOqHHce2ullYayF5CizaN9kOAR_gTgSZiVF7cfo" />
-
-    <!-- Geo-positioning for Local SEO -->
-    <meta name="geo.region" content="IL" />
-    <meta name="geo.country" content="Israel" />
-    <meta name="geo.placename" content="Ness Ziona" />
-    <meta name="ICBM" content="31.9292, 34.7986" />
-    <meta name="revisit-after" content="7 days" />
-
-    <!-- Google Analytics (async) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-
-    <!-- Preload critical resources for better LCP -->
-    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="my photo.jpeg" as="image" type="image/jpeg">
-    <noscript><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap"></noscript>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="he_IL" />
-    <meta property="og:site_name" content="Change - פיתוח אתרים ומערכות AI" />
-    <meta property="og:title" content="Change - פיתוח אתרים ומערכות AI בנס ציונה | חי עטיה" />
-    <meta property="og:description" content="פיתוח אתרים מקצועיים ומערכות למידה AI למורים, עסקים ומוסדות חינוך בנס ציונה. אוטומציה עסקית חכמה ופתרונות דיגיטליים מתקדמים." />
-    <meta property="og:url" content="https://change-digital-solutions.netlify.app" />
-    <meta property="og:image" content="https://change-digital-solutions.netlify.app/images/change-logo.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Change - פיתוח אתרים ומערכות AI בנס ציונה" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Change - פיתוח אתרים ומערכות AI בנס ציונה | חי עטיה" />
-    <meta name="twitter:description" content="פיתוח אתרים מקצועיים ומערכות למידה AI למורים, עסקים ומוסדות חינוך בנס ציונה. אוטומציה עסקית חכמה." />
-    <meta name="twitter:image" content="https://change-digital-solutions.netlify.app/images/change-logo.png" />
-    <meta name="twitter:image:alt" content="Change - פיתוח אתרים ומערכות AI בנס ציונה" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://change-digital-solutions.netlify.app" />
-
-    <!-- Alternate languages -->
-    <link rel="alternate" hreflang="he" href="https://change-digital-solutions.netlify.app" />
-    <link rel="alternate" hreflang="en" href="https://change-digital-solutions.netlify.app/en.html" />
-
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-    <!-- Structured Data - LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "@id": "https://change-digital-solutions.netlify.app/#organization",
-      "name": "Change - Digital Solutions",
-      "alternateName": "Change פיתוח אתרים ומערכות AI",
-      "url": "https://change-digital-solutions.netlify.app",
-      "logo": "https://change-digital-solutions.netlify.app/images/change-logo.png",
-      "image": "https://change-digital-solutions.netlify.app/images/change-office.jpg",
-      "description": "Change - פיתוח אתרים מקצועיים ומערכות למידה AI למורים, עסקים ומוסדות חינוך בנס ציונה. אוטומציה עסקית חכמה, פתרונות דיגיטליים מתקדמים. מומחה בבינה מלאכותית לחינוך ופתרונות דיגיטליים.",
-      "founder": {
-        "@type": "Person",
-        "name": "חי עטיה",
-        "jobTitle": "מייסד ומפתח בכיר",
-        "telephone": "050-123-4567",
-        "email": "haim@change-digital.co.il"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "נס ציונה",
-        "addressRegion": "מרכז",
-        "addressCountry": "IL",
-        "postalCode": "74000"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "31.9292",
-        "longitude": "34.7986"
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "נס ציונה"
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      <!-- Primary Meta Tags -->
+      <title>Change - פיתוח אתרים ומערכות AI למורים ועסקים בנס ציונה | חיים עטיה</title>
+      <meta name="title" content="Change - פיתוח אתרים ומערכות AI למורים ועסקים בנס ציונה">
+      <meta name="description" content="פיתוח אתרים מקצועיים, מערכות למידה מבוססות AI ואוטומציה עסקית. מתמחים בפתרונות למוסדות חינוך ועסקים קטנים בנס ציונה והמרכז. ייעוץ ראשוני חינם.">
+      <meta name="keywords" content="פיתוח אתרים נס ציונה, מערכות למידה AI, אוטומציה עסקית, פיתוח אפליקציות, בינה מלאכותית לחינוך, בניית אתרים ישראל">
+      <meta name="author" content="Haim Atia - Change Digital Solutions">
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+      
+      <!-- Canonical URL -->
+      <link rel="canonical" href="https://change-digital-solutions.netlify.app/">
+  
+      <!-- Security Headers -->
+      <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://api.emailjs.com https://api.github.com;" />
+      <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+      <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+      <!-- Google Search Console Verification -->
+      <meta name="google-site-verification" content="0AeOqOqHHce2ullYayF5CizaN9kOAR_gTgSZiVF7cfo" />
+  
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://change-digital-solutions.netlify.app/">
+      <meta property="og:title" content="Change - פיתוח אתרים ומערכות AI למורים ועסקים">
+      <meta property="og:description" content="פתרונות דיגיטליים מתקדמים: אתרים מקצועיים, מערכות למידה AI ואוטומציה עסקית. נס ציונה והמרכז.">
+      <meta property="og:image" content="https://change-digital-solutions.netlify.app/my%20photo_optimized.jpeg">
+      <meta property="og:locale" content="he_IL">
+      <meta property="og:site_name" content="Change Digital Solutions">
+  
+      <!-- Twitter Card -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:url" content="https://change-digital-solutions.netlify.app/">
+      <meta name="twitter:title" content="Change - פיתוח אתרים ומערכות AI">
+      <meta name="twitter:description" content="פתרונות דיגיטליים מתקדמים למורים ועסקים בנס ציונה">
+      <meta name="twitter:image" content="https://change-digital-solutions.netlify.app/my%20photo_optimized.jpeg">
+  
+      <!-- Geo Tags for Local SEO -->
+      <meta name="geo.region" content="IL-M" />
+      <meta name="geo.placename" content="נס ציונה, ישראל" />
+      <meta name="geo.position" content="31.9303;34.7919" />
+      <meta name="ICBM" content="31.9303, 34.7919" />
+  
+      <!-- Language Alternatives -->
+      <link rel="alternate" hreflang="he" href="https://change-digital-solutions.netlify.app/" />
+      <link rel="alternate" hreflang="en" href="https://change-digital-solutions.netlify.app/en.html" />
+      <link rel="alternate" hreflang="x-default" href="https://change-digital-solutions.netlify.app/" />
+  
+      <!-- Google Analytics (async) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+      </script>
+  
+      <!-- Preload critical resources for better LCP -->
+      <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" href="my_photo_optimized.jpeg" as="image" type="image/jpeg">
+      <noscript><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap"></noscript>
+  
+      <!-- Preconnect for performance -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest" />
+    
+      <!-- EmailJS -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+      <!-- Structured Data - Schema.org -->
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://change-digital-solutions.netlify.app/#organization",
+        "name": "Change - Digital Solutions",
+        "alternateName": "Change פיתוח אתרים ומערכות AI",
+        "url": "https://change-digital-solutions.netlify.app/",
+        "logo": "https://change-digital-solutions.netlify.app/logo.png",
+        "image": "https://change-digital-solutions.netlify.app/my_photo_optimized.jpeg",
+        "description": "פיתוח אתרים מקצועיים, מערכות למידה מבוססות AI ואוטומציה עסקית. מתמחים בפתרונות למוסדות חינוך ועסקים קטנים בנס ציונה והמרכז.",
+        "founder": {
+          "@type": "Person",
+          "name": "חיים עטיה",
+          "jobTitle": "מייסד ומפתח בכיר",
+          "url": "https://www.linkedin.com/in/haim-atia-change"
         },
-        {
-          "@type": "City",
-          "name": "רחובות"
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "נס ציונה",
+          "addressRegion": "M",
+          "addressCountry": "IL",
+          "postalCode": "74000"
         },
-        {
-          "@type": "City",
-          "name": "ראשון לציון"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "31.9303",
+          "longitude": "34.7919"
         },
-        {
-          "@type": "State",
-          "name": "מרכז"
-        }
-      ],
-      "serviceType": ["פיתוח אתרים", "מערכות AI", "אוטומציה עסקית", "פיתוח אפליקציות"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "שירותי Change Digital Solutions",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "פיתוח אתרים מקצועיים",
-              "description": "פיתוח אתרים מותאמים אישית לעסקים קטנים ובינוניים"
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+972-52-4405982",
+          "contactType": "customer service",
+          "availableLanguage": ["Hebrew", "English"],
+          "areaServed": ["IL"]
+        },
+        "serviceType": ["פיתוח אתרים", "מערכות AI", "אוטומציה עסקית", "פיתוח אפליקציות", "ייעוץ דיגיטלי"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "שירותים",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "פיתוח אתרים מותאמים",
+                "description": "פיתוח אתרים מקצועיים ומותאמים אישית עם עיצוב מודרני וחוויית משתמש מעולה."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "אוטומציה חכמה",
+                "description": "שיפור תהליכים עסקיים עם פתרונות אוטומציה מתקדמים שחסכים זמן וכסף."
+              }
+            },
+            {
+               "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "פיתוח אפליקציות",
+                "description": "פיתוח אפליקציות חדשניות למובייל ולדסקטופ שמייצרות ערך אמיתי."
+              }
+            },
+             {
+               "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "ייעוץ דיגיטלי חינמי",
+                "description": "שיחת ייעוץ ראשונית חינמית להבנת הצרכים הדיגיטליים של העסק שלך."
+              }
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "מערכות למידה AI",
-              "description": "פיתוח מערכות למידה חכמות מבוססות בינה מלאכותית למוסדות חינוך"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "אוטומציה עסקית",
-              "description": "פתרונות אוטומציה חכמה לייעול תהליכי עבודה"
-            }
-          }
-        ]
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "050-123-4567",
-        "contactType": "customer service",
-        "availableLanguage": ["Hebrew", "English"],
-        "contactOption": "TollFree"
-      },
-      "sameAs": [
-        "https://github.com/shkomig",
-        "https://www.linkedin.com/in/haim-atia-change"
-      ],
-      "knowsAbout": [
-        "פיתוח אתרים",
-        "בינה מלאכותית",
-        "אוטומציה עסקית",
-        "פיתוח אפליקציות",
-        "SEO",
-        "חינוך דיגיטלי"
-      ],
-      "priceRange": "$$"
-    }
-    </script>
-
-    <!-- Additional Structured Data - Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://change-digital-solutions.netlify.app/#organization",
-      "name": "Change - Digital Solutions",
-      "url": "https://change-digital-solutions.netlify.app",
-      "logo": "https://change-digital-solutions.netlify.app/images/change-logo.png",
-      "description": "Change - פיתוח אתרים מקצועיים ומערכות למידה AI למורים, עסקים ומוסדות חינוך בנס ציונה",
-      "foundingDate": "2024",
-      "founder": {
-        "@type": "Person",
-        "name": "חי עטיה",
-        "jobTitle": "מייסד ומפתח בכיר"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+972-50-123-4567",
-        "contactType": "customer service",
-        "availableLanguage": ["Hebrew", "English"]
-      },
-      "sameAs": [
-        "https://github.com/shkomig",
-        "https://www.linkedin.com/in/haim-atia-change"
-      ]
-    }
-    </script>
-  </head>
-  <body>
+          ]
+        },
+        "sameAs": [
+          "https://github.com/shkomig",
+          "https://www.linkedin.com/in/haim-atia-change"
+        ],
+        "priceRange": "$$"
+      }
+      </script>
+  </head>  <body>
     <!-- Header -->
     <header class="header">
       <nav class="nav">
@@ -317,7 +261,7 @@
       <div class="container">
         <div class="about-content">
           <div class="about-avatar">
-            <img id="github-avatar" class="avatar" src="my photo.jpeg" alt="חי עטיה - מייסד Change Digital Solutions" title="חי עטיה - מפתח בכיר ומייסד" loading="lazy" width="400" height="400" />
+            <img id="github-avatar" class="avatar" src="my photo_optimized.jpeg" alt="חי עטיה - מייסד Change Digital Solutions" title="חי עטיה - מפתח בכיר ומייסד" loading="lazy" width="400" height="400" />
           </div>
           <div class="about-text">
             <h2 class="section-title">אודות Change | חי עטיה</h2>
