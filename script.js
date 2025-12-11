@@ -344,7 +344,7 @@ async function fetchGitHubData() {
 // Call on load (non-blocking)
 document.addEventListener('DOMContentLoaded', () => {
   // Delay GitHub fetch to not block initial page load
-  setTimeout(fetchGitHubData, 2000);
+  // setTimeout(fetchGitHubData, 2000);
 })
 
 // FAQ Accordion
