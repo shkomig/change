@@ -399,3 +399,43 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 });
 
+// Metrics Counter Animation - Corporate Style
+function animateMetrics() {
+  const metricValues = document.querySelectorAll('.metric-value');
+  
+  const observerOptions = {
+    threshold: 0.3,
+    rootMargin: '0px'
+  };
+
+  const metricsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = parseInt(entry.target.getAttribute('data-target'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            entry.target.textContent = target;
+            clearInterval(timer);
+          } else {
+            entry.target.textContent = Math.floor(current);
+          }
+        }, 16);
+
+        metricsObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  metricValues.forEach(metric => metricsObserver.observe(metric));
+}
+
+// Initialize metrics counter when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', animateMetrics);
+} else {
+  animateMetrics();
