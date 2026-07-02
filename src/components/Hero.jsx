@@ -16,10 +16,12 @@ export default function Hero() {
             <span className="led-green" />
             <span className="font-mono text-xs tracking-wide text-emerald-300">5 SYSTEMS ONLINE</span>
           </div>
-          <h1 className="text-4xl font-black leading-tight text-white md:text-[3.4rem] md:leading-[1.15]">
-            אחרים מציגים מצגות.
+          <h1 className="text-4xl font-black leading-tight text-white md:text-[3.2rem] md:leading-[1.15]">
+            סוכנים אוטונומיים.
             <br />
-            <span className="text-gradient">אצלי המערכות כבר רצות.</span>
+            מערכות AI.
+            <br />
+            <span className="text-gradient">פתרונות שעובדים.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
             הטרמינל שמשמאל אמיתי: סטודיו אנימציה שמפיק פרקים לבד, בוט שסוחר בבורסה ברגעים אלו,

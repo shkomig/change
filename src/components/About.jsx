@@ -20,13 +20,13 @@ export default function About() {
             <span className="chip mb-4">מי מאחורי המערכות</span>
             <h2 className="text-3xl font-black text-white md:text-4xl">חי עטיה</h2>
             <p className="mt-5 leading-relaxed text-slate-400">
-              מפתח מערכות AI מ{CONTACT.location.replace(', ישראל', '')}. אני לא אינטגרטור שמחבר
-              כלים מוכנים — אני בונה מערכות שלמות מאפס: מאימון מודלים ייעודיים (LoRA) על GPU מקומי,
-              דרך שרתי FastAPI וממשקי React, ועד בוטים שמריצים כסף אמיתי בבורסה.
+              מפתח מערכות AI מ{CONTACT.location.replace(', ישראל', '')}. אני בונה מערכות שלמות
+              מאפס: מאימון מודלים ייעודיים (LoRA) על GPU מקומי, דרך שרתי FastAPI וממשקי React,
+              ועד בוטים שמריצים כסף אמיתי בבורסה.
             </p>
             <p className="mt-4 leading-relaxed text-slate-400">
               הגישה שלי פשוטה: כל פרויקט חייב לרוץ בפרודקשן ולהוכיח את עצמו במספרים. בגלל זה האתר
-              הזה בנוי מקייס סטאדיז — לא מסיסמאות. אם יש לכם תהליך שגוזל זמן, רעיון למוצר AI, או
+              הזה בנוי מקייס סטאדיז אמיתיים. אם יש לכם תהליך שגוזל זמן, רעיון למוצר AI, או
               מערכת שצריכה לקום — אני האיש שיגרום לזה לעבוד.
             </p>
             <div className="mt-7 flex flex-wrap gap-4">

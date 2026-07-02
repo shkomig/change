@@ -76,7 +76,7 @@ export default function CaseStudies() {
   return (
     <section id="case-studies" className="mx-auto max-w-6xl px-5 py-20">
       <Reveal className="mb-12 text-center">
-        <span className="chip mb-4">הוכחות, לא הבטחות</span>
+        <span className="chip mb-4">מערכות אמיתיות, בפרודקשן</span>
         <h2 className="text-3xl font-black text-white md:text-5xl">
           קייס <span className="text-gradient">סטאדיז</span>
         </h2>
