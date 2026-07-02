@@ -6,6 +6,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* anchored sections must clear the fixed navbar */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
 body {
   @apply bg-ink text-slate-200 font-heebo antialiased;
 }
@@ -24,4 +29,50 @@ body {
 
 .chip {
   @apply inline-flex items-center rounded-full border border-line bg-panel px-3 py-1 text-xs text-slate-300;
+}
+
+/* blueprint grid backdrop */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(77, 216, 230, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 216, 230, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* pulsing status LED */
+.led {
+  @apply relative inline-block h-2.5 w-2.5 rounded-full;
+}
+.led-green {
+  @apply led bg-emerald-400;
+  box-shadow: 0 0 8px 2px rgba(52, 211, 153, 0.55);
+  animation: led-pulse 1.6s ease-in-out infinite;
+}
+@keyframes led-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+/* hero entrance — pure CSS so it can never strand elements at opacity 0 */
+.fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+.fade-up-1 { animation-delay: 0.15s; }
+.fade-up-2 { animation-delay: 0.3s; }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { animation: none; }
+}
+
+/* terminal caret */
+.caret::after {
+  content: '▋';
+  @apply text-emerald-400;
+  animation: caret-blink 0.9s step-end infinite;
+}
+@keyframes caret-blink {
+  50% { opacity: 0; }
 }

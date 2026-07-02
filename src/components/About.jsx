@@ -36,6 +36,9 @@ export default function About() {
               <a href={CONTACT.youtube} target="_blank" rel="noreferrer" className="chip transition hover:border-gold hover:text-gold">
                 YouTube ↗
               </a>
+              <a href={CONTACT.facebook} target="_blank" rel="noreferrer" className="chip transition hover:border-gold hover:text-gold">
+                Facebook ↗
+              </a>
             </div>
           </Reveal>
         </div>

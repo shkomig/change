@@ -5,8 +5,24 @@ export const CONTACT = {
   whatsapp: 'https://wa.me/972524405982',
   github: 'https://github.com/shkomig',
   youtube: 'https://www.youtube.com/@Meir_Lantern',
+  facebook: 'https://www.facebook.com/profile.php?id=61584752903413',
   location: 'נס ציונה, ישראל',
 }
+
+export const TERMINAL_LINES = [
+  { cmd: 'start meir_studio --pipeline full', out: '✓ FLUX + 5 LoRAs נטענו · פריים ב-29 שניות · lip-sync פעיל' },
+  { cmd: 'run zero_trading --live', out: '✓ מחובר ל-Interactive Brokers · מנוע סיכונים ON · v3.7.6' },
+  { cmd: 'launch zero_agent --local', out: '✓ 33 כלים · 0 קריאות ענן · רץ על המכונה שלך' },
+  { cmd: 'render studio_zero --to youtube', out: '✓ תסריט → תמונות → וידאו → קריינות → MP4 סופי' },
+]
+
+export const SYSTEM_BOARD = [
+  { name: 'MEIR_STUDIO', desc: 'סטודיו אנימציה', version: 'v3.1', status: 'ACTIVE' },
+  { name: 'ZERO_TRADING', desc: 'בוט מסחר', version: 'v3.7.6', status: 'ACTIVE' },
+  { name: 'ZERO_AGENT', desc: 'סוכן מקומי', version: 'OSS', status: 'ACTIVE' },
+  { name: 'STUDIO_ZERO', desc: 'הפקת תוכן', version: 'v1.0', status: 'ACTIVE' },
+  { name: 'MATH_LEARN', desc: 'מערכת למידה', version: 'PROD', status: 'ACTIVE' },
+]
 
 export const STATS = [
   { value: '5+', label: 'מערכות בפרודקשן' },
@@ -18,6 +34,7 @@ export const STATS = [
 export const CASE_STUDIES = [
   {
     id: 'meir',
+    sys: { id: 'MEIR_STUDIO', version: 'v3.1', status: 'LIVE' },
     tag: 'סטודיו אנימציה AI',
     title: 'מאיר והפנס — סדרת אנימציה שנוצרת אוטומטית',
     problem:
@@ -34,6 +51,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'zte',
+    sys: { id: 'ZERO_TRADING', version: 'v3.7.6', status: 'LIVE' },
     tag: 'אלגו-טריידינג',
     title: 'Zero Trading Expert — בוט מסחר יומי מבוסס AI',
     problem:
@@ -50,6 +68,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'zero-agent',
+    sys: { id: 'ZERO_AGENT', version: 'MIT / OSS', status: 'LIVE' },
     tag: 'קוד פתוח',
     title: 'Zero Agent — סוכן AI אוטונומי, 100% מקומי',
     problem:
@@ -66,6 +85,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'studio-zero',
+    sys: { id: 'STUDIO_ZERO', version: 'v1.0', status: 'LIVE' },
     tag: 'הפקת תוכן AI',
     title: 'Studio Zero — סטודיו תוכן אוניברסלי: מרעיון לסרטון ביוטיוב',
     problem:
@@ -82,6 +102,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'math',
+    sys: { id: 'MATH_LEARN', version: 'PROD', status: 'LIVE' },
     tag: 'EdTech',
     title: 'מערכת למידת מתמטיקה אדפטיבית לכיתות א׳-ב׳',
     problem:

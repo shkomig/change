@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         heebo: ['Heebo', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
         ink: '#06070b',

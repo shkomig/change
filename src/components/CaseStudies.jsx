@@ -5,6 +5,17 @@ function CaseCard({ cs, index }) {
   return (
     <Reveal>
       <article className="card-border overflow-hidden">
+        {/* module header bar */}
+        <div className="flex items-center justify-between border-b border-line bg-panel/70 px-5 py-2.5" dir="ltr">
+          <div className="flex items-center gap-2.5">
+            <span className="led-green" />
+            <span className="font-mono text-xs font-bold tracking-wider text-white">{cs.sys.id}</span>
+            <span className="font-mono text-[10px] text-slate-500">{cs.sys.version}</span>
+          </div>
+          <span className="rounded-full border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-0.5 font-mono text-[10px] font-bold text-emerald-300">
+            {cs.sys.status}
+          </span>
+        </div>
         <div className="grid gap-0 lg:grid-cols-5">
           {/* main content */}
           <div className="p-8 lg:col-span-3 lg:p-10">
@@ -45,7 +56,7 @@ function CaseCard({ cs, index }) {
 
           {/* results panel */}
           <div className="border-t border-line bg-panel/60 p-8 lg:col-span-2 lg:border-r lg:border-t-0 lg:p-10">
-            <div className="mb-6 text-sm font-bold uppercase tracking-wider text-slate-500">תוצאות</div>
+            <div className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-slate-500">// תוצאות</div>
             <div className="space-y-6">
               {cs.results.map((r) => (
                 <div key={r.label}>

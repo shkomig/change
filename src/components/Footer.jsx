@@ -13,6 +13,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-5 text-sm text-slate-400">
           <a href={CONTACT.github} target="_blank" rel="noreferrer" className="hover:text-gold">GitHub</a>
           <a href={CONTACT.youtube} target="_blank" rel="noreferrer" className="hover:text-gold">YouTube</a>
+          <a href={CONTACT.facebook} target="_blank" rel="noreferrer" className="hover:text-gold">Facebook</a>
           <a href={`mailto:${CONTACT.email}`} className="hover:text-gold">{CONTACT.email}</a>
           <span>{CONTACT.location}</span>
         </div>

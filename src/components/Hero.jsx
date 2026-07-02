@@ -1,34 +1,31 @@
-import { motion } from 'framer-motion'
-import { STATS } from '../data/content'
+import Terminal from './Terminal'
+import { SYSTEM_BOARD } from '../data/content'
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-36 pb-20">
-      {/* background glow */}
+    <section id="top" className="bg-grid relative overflow-hidden pt-32 pb-16">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 right-1/4 h-[500px] w-[500px] rounded-full bg-gold/10 blur-[140px]" />
         <div className="absolute top-40 left-1/5 h-[400px] w-[400px] rounded-full bg-cyan/10 blur-[140px]" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-5 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <span className="chip mb-6">מערכות AI בפרודקשן — לא מצגות</span>
-          <h1 className="mx-auto max-w-4xl text-4xl font-black leading-tight text-white md:text-6xl">
-            אני בונה מערכות AI
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
+        {/* copy */}
+        <div className="fade-up">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/5 px-4 py-1.5">
+            <span className="led-green" />
+            <span className="font-mono text-xs tracking-wide text-emerald-300">5 SYSTEMS ONLINE</span>
+          </div>
+          <h1 className="text-4xl font-black leading-tight text-white md:text-[3.4rem] md:leading-[1.15]">
+            אחרים מציגים מצגות.
             <br />
-            <span className="text-gradient">שעובדות באמת. כל יום.</span>
+            <span className="text-gradient">אצלי המערכות כבר רצות.</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
-            סטודיו אנימציה שמפיק פרקים לבד, בוט שסוחר בבורסה בזמן אמת, סוכן AI שרץ בלי ענן —
-            אלו לא הבטחות, אלו מערכות חיות שבניתי מקצה לקצה.
-            למטה תמצאו את הקייס סטאדיז המלאים.
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
+            הטרמינל שמשמאל אמיתי: סטודיו אנימציה שמפיק פרקים לבד, בוט שסוחר בבורסה ברגעים אלו,
+            וסוכן AI שרץ בלי ענן. כל מערכת כאן נבנתה מאפס — ועובדת בפרודקשן, כל יום.
           </p>
-
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#case-studies"
               className="rounded-full bg-gold px-8 py-3.5 font-bold text-ink shadow-glow transition hover:bg-amber-300"
@@ -42,21 +39,34 @@ export default function Hero() {
               דברו איתי
             </a>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.25 }}
-          className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-4 md:grid-cols-4"
-        >
-          {STATS.map((s) => (
-            <div key={s.label} className="card-border px-4 py-5">
-              <div className="text-3xl font-black text-gold">{s.value}</div>
-              <div className="mt-1 text-sm text-slate-400">{s.label}</div>
-            </div>
-          ))}
-        </motion.div>
+        {/* live terminal */}
+        <div className="fade-up fade-up-1">
+          <Terminal />
+        </div>
+      </div>
+
+      {/* system status board */}
+      <div className="fade-up fade-up-2 relative mx-auto mt-16 max-w-6xl px-5">
+        <div className="card-border overflow-hidden">
+          <div className="flex items-center justify-between border-b border-line bg-panel/70 px-5 py-2.5">
+            <span className="font-mono text-xs tracking-widest text-slate-500">SYSTEM STATUS</span>
+            <span className="font-mono text-xs text-emerald-400">ALL OPERATIONAL</span>
+          </div>
+          <div className="grid grid-cols-2 divide-y divide-line md:grid-cols-5 md:divide-x md:divide-y-0 md:divide-x-reverse">
+            {SYSTEM_BOARD.map((s) => (
+              <div key={s.name} className="flex flex-col gap-1 px-5 py-4">
+                <div className="flex items-center gap-2">
+                  <span className="led-green" />
+                  <span className="font-mono text-xs font-bold text-white">{s.name}</span>
+                </div>
+                <span className="text-xs text-slate-400">{s.desc}</span>
+                <span className="font-mono text-[10px] text-slate-500">{s.version} · {s.status}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
