@@ -42,15 +42,20 @@ function CaseCard({ cs, index }) {
               ))}
             </div>
 
-            {cs.link && (
-              <a
-                href={cs.link.url}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-7 inline-flex items-center gap-2 rounded-full border border-gold/50 px-6 py-2.5 text-sm font-bold text-gold transition hover:bg-gold hover:text-ink"
-              >
-                {cs.link.label} ↗
-              </a>
+            {(cs.links || (cs.link ? [cs.link] : [])).length > 0 && (
+              <div className="mt-7 flex flex-wrap gap-3">
+                {(cs.links || [cs.link]).map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-gold/50 px-6 py-2.5 text-sm font-bold text-gold transition hover:bg-gold hover:text-ink"
+                  >
+                    {link.label} ↗
+                  </a>
+                ))}
+              </div>
             )}
           </div>
 

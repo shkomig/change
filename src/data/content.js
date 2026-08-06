@@ -31,7 +31,7 @@ export const STATS = [
   { value: '24/7', label: 'מערכות שרצות לבד' },
 ]
 
-export const CASE_STUDIES = [
+const BASE_CASE_STUDIES = [
   {
     id: 'meir',
     sys: { id: 'MEIR_STUDIO', version: 'v3.1', status: 'LIVE' },
@@ -118,6 +118,49 @@ export const CASE_STUDIES = [
     link: null,
   },
 ]
+
+const CONTENT_REFRESH = {
+  meir: {
+    sys: { id: 'MEIR_LANTERN', version: '2026', status: 'LIVE' },
+    tag: 'EdTech · תוכן לילדים',
+    title: 'מאיר והפנס — עולם תוכן דיגיטלי, בטוח וערכי לילדים',
+    problem:
+      'ילדים והורים מחפשים בעברית תוכן איכותי שמחבר בין בידור, דמיון וערכים — במקום אוסף סרטונים מקרי. האתגר היה להפוך סדרת דמויות למותג תוכן שלם ונגיש בכמה פורמטים.',
+    solution:
+      'פלטפורמת תוכן מלאה סביב מאיר והפנס: 27 פרקי וידאו, ארבעה סיפורי לילה מוקלטים, משחקים אינטראקטיביים, דמויות תלת־ממד ואזורי תוכן לילדים ולהורים. מאחורי המוצר פועלת מערכת תוכן מובנית שמאפשרת לפרסם, להרחיב ולתחזק את העולם לאורך זמן.',
+    tech: ['Next.js 16', 'React 19', 'TypeScript', 'Three.js / R3F', 'Netlify', 'AI Media Pipeline'],
+    results: [
+      { value: '27 פרקים', label: 'סדרת תוכן פעילה בערוץ היוטיוב' },
+      { value: '4 סיפורי לילה', label: 'סיפורים מלאים עם קריינות בעברית' },
+      { value: 'משחקים + 3D', label: 'חוויה אינטראקטיבית מעבר לצפייה' },
+    ],
+    links: [
+      { url: 'https://meirlantern.co.il/', label: 'בקרו באתר מאיר והפנס' },
+      { url: 'https://www.youtube.com/@Meir_Lantern', label: 'לערוץ היוטיוב' },
+    ],
+  },
+  'zero-agent': {
+    sys: { id: 'ZERO_AGENT', version: 'OSS / 2026', status: 'ACTIVE' },
+    tag: 'Local AI · קוד פתוח',
+    title: 'Zero Agent — סביבת AI אוטונומית, פרטית ו־100% מקומית',
+    problem:
+      'עבודה עם סוכני AI בענן חושפת מידע רגיש, תלויה בספקים חיצוניים ומייצרת עלויות שימוש מתמשכות. נדרשה סביבת עבודה חזקה שרצה על החומרה המקומית, אך עדיין יודעת לחקור, לפתח, לזכור, ליצור מדיה ולהפעיל כלים בצורה מבוקרת.',
+    solution:
+      'מערכת סוכן מלאה סביב Ollama עם תכנון Supervisor–Worker, אימות תוצאות ו־API Guard, זיכרון וקטורי ב־ChromaDB, מחקר עמוק עם דירוג מקורות, כלי אבטחה, Graphify למיפוי מערכות, קול וראייה מקומיים ויצירת תמונה/וידאו דרך ComfyUI. המערכת זמינה בדשבורד, CLI ובוט Telegram, עם שכבות הרשאה והגנה מפני Prompt Injection.',
+    tech: ['Python', 'Ollama', 'FastAPI + WebSocket', 'ChromaDB', 'Graphify', 'ComfyUI', 'Kokoro + Whisper'],
+    results: [
+      { value: '100% מקומי', label: 'המודלים והמידע נשארים על המחשב' },
+      { value: 'Agent Platform', label: 'מחקר, קוד, זיכרון, אבטחה ומדיה במערכת אחת' },
+      { value: 'Open Source', label: 'רישיון MIT ופיתוח פעיל ב־GitHub' },
+    ],
+    link: { url: 'https://github.com/shkomig/Zero_agent_2026', label: 'לקוד המקור ב־GitHub' },
+  },
+}
+
+export const CASE_STUDIES = BASE_CASE_STUDIES.map((study) => ({
+  ...study,
+  ...(CONTENT_REFRESH[study.id] || {}),
+}))
 
 export const TECH_STACK = [
   'Python', 'React', 'FastAPI', 'Node.js', 'Claude API', 'Gemini', 'OpenAI',
