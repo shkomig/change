@@ -6,7 +6,7 @@ export default function GiftSection() {
       <div className="mx-auto max-w-6xl px-5">
         <Reveal>
           <a
-            href="#/kidsfilter"
+            href="/kidsfilter"
             className="card-border group block p-7 transition hover:shadow-glow md:p-9"
           >
             <div className="flex flex-col items-center gap-6 text-center md:flex-row md:text-start">

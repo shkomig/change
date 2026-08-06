@@ -60,13 +60,13 @@ export default function KidsFilterPage() {
       {/* Top bar */}
       <header className="border-b border-line bg-panel/60 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
-          <a href="#/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3">
             <img src="/logo.png" alt="" className="h-8 w-8 rounded-lg object-contain" />
             <span className="font-extrabold text-white">
               Change<span className="text-gold"> Digital Solutions</span>
             </span>
           </a>
-          <a href="#/" className="text-sm font-medium text-slate-400 transition hover:text-gold">
+          <a href="/" className="text-sm font-medium text-slate-400 transition hover:text-gold">
             → חזרה לאתר
           </a>
         </div>

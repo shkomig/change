@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CaseStudies from './components/CaseStudies'
@@ -11,22 +11,22 @@ import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import KidsFilterPage from './pages/KidsFilterPage'
 
-function useHashRoute() {
-  const [hash, setHash] = useState(window.location.hash)
+export default function App() {
+  const isKidsFilter = window.location.pathname === '/kidsfilter' || window.location.hash === '#/kidsfilter'
 
   useEffect(() => {
-    const handleHashChange = () => setHash(window.location.hash)
-    window.addEventListener('hashchange', handleHashChange)
-    return () => window.removeEventListener('hashchange', handleHashChange)
-  }, [])
+    if (window.location.hash === '#/kidsfilter') {
+      window.history.replaceState({}, '', '/kidsfilter')
+    }
 
-  return hash
-}
+    if (isKidsFilter) {
+      document.title = 'סינון תכנים לילדים במחשב — ערכה חינמית | Change Digital Solutions'
+      document.querySelector('meta[name="description"]')?.setAttribute('content', 'ערכת סינון תכנים חינמית למחשב הילדים, עם הסבר התקנה מלא בעברית וללא מנוי.')
+      document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://change-digital.co.il/kidsfilter')
+    }
+  }, [isKidsFilter])
 
-export default function App() {
-  const hash = useHashRoute()
-
-  if (hash === '#/kidsfilter') {
+  if (isKidsFilter) {
     return <KidsFilterPage />
   }
 
